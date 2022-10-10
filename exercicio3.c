@@ -31,7 +31,19 @@ Lista* concatLista(Lista* l1, Lista* l2){
             }
         } else {
             if (auxL1 == NULL){
+                ant = auxL2;
+                auxL2 = auxL2->prox;
+            } else{
+                ant = auxL1;
+                auxL1 = auxL1->prox;
+            }
 
+            if (f == NULL){
+                f = ant;
+                antF = f;
+            } else{
+                antF->prox = ant;
+                antF = ant;
             }
         }
     }
@@ -40,17 +52,17 @@ Lista* concatLista(Lista* l1, Lista* l2){
 }
 
 int main(){
-    Lista* l1 = criaNo(10);
-    l1 = insereFinal(l1, 20);
-    l1 = insereFinal(l1, 30);
-
-    imprimeLista(l1);
-
-    Lista* l2 = criaNo(40);
-    l2 = insereFinal(l2, 50);
-    l2 = insereFinal(l2, 60);
+    Lista* l2 = criaNo(10);
+    l2 = insereFinal(l2, 20);
+    l2 = insereFinal(l2, 30);
 
     imprimeLista(l2);
+
+    Lista* l1 = criaNo(40);
+    l1 = insereFinal(l1, 50);
+    l1 = insereFinal(l1, 60);
+
+    imprimeLista(l1);
 
     Lista* l3 = concatLista(l1, l2);
 
