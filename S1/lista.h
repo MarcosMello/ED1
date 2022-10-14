@@ -20,6 +20,4 @@ Lista* excluiFinal(Lista *l);
 Lista* excluiNo(Lista *l, int valor);
 void imprimeLista(Lista *l);
 
-// Ordenada
-
 #endif

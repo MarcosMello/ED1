@@ -3,18 +3,24 @@
 Lista* removeDup(Lista* l){
     Lista* aux = l;
     Lista* l2 = l;
+    Lista* pred;
 
     if (l != NULL){
         l2 = criaNo(l->info);
 
         aux = aux->prox;
 
+        free(l);
+
         while (aux != NULL){
             if (buscaNo(l2, aux->info) == NULL){
                 l2 = insereFinal(l2, aux->info);
             }
 
+            pred = aux;
             aux = aux->prox;
+
+            free(pred);
         }
     }
 
