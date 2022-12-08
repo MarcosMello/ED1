@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "no.h": "c",
+    "stdlib.h": "c",
+    "stdio.h": "c",
+    "ponto.h": "c",
+    "type.h": "c",
+    "errno.h": "c"
+  }
+}
