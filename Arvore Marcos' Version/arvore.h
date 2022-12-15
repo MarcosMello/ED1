@@ -10,5 +10,6 @@ typedef struct arvore{
 
 Arvore *criaArvore();
 void insereNo(Arvore *A, No *no, int (*cb) (void *, void *));
+void imprimeDFS(Arvore *A, void (*cb) (void *));
 
 #endif
