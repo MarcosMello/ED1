@@ -18,7 +18,7 @@ void insereNo(Arvore *A, No *no, int (*cb)(void *, void *)) {
     if (A != NULL) {
         if (A->root != NULL && cb(A->root->info, no->info)) {
             recursiveInsert(A->root, no, cb);
-        } else {
+        } else if (A->root == NULL){
             A->root = no;
         }
     }
